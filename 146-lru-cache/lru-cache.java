@@ -4,18 +4,15 @@ class LRUCache {
         int val;
         Node prev;
         Node next;
-
         Node(int key, int val) {
             this.key = key;
             this.val = val;
         }
     }
-
     Node head = new Node(-1, -1);
     Node tail = new Node(-1, -1);
     int cap;
     HashMap<Integer, Node> m = new HashMap<>();
-
     public LRUCache(int capacity) {
         cap = capacity;
         head.next = tail;
